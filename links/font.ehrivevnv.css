@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'ehrivevnv';
+    src: url('../media/fonts/EHRIVEVN_V LO (Deprecated).ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ehrivevnv_july';
+    src: url('../media/fonts/Ehrivnv July.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
