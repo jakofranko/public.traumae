@@ -4,3 +4,24 @@
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'septambres_neau';
+    src: url('../media/fonts/Septambres Neau.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'septambres_fune';
+    src: url('../media/fonts/Septambres Fune.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'septambres_lith';
+    src: url('../media/fonts/Septambres Lith.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
