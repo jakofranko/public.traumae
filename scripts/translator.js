@@ -41,9 +41,6 @@ function init() {
                     if(dict[english].traumae) tra_dict[dict[english].traumae].push(english);
                 }
 
-                console.log(dict);
-                console.log(tra_dict);
-
                 // Attributes
                 eng_to_tra.id = "eng_to_tra";
                 eng_input.id = "eng_input";
@@ -76,7 +73,7 @@ function init() {
                     traumae = [];
                     words.forEach(english => {
                         if(dict[english] && dict[english].traumae)
-                            traumae.push(dict[english].traumae)
+                            traumae.push(dict[english].traumae);
                         else
                             traumae.push("<missing>");
                     });
