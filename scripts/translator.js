@@ -32,6 +32,7 @@ function init() {
                     tra_to_eng      = document.createElement("div"),
                     tra_input       = document.createElement("textarea"),
                     eng_output      = document.createElement("div"),
+                    letters_to_both = document.createElement("div"),
                     letters_input   = document.createElement("textarea"),
                     letter_type     = document.createElement("select"),
                     words, traumae, english;
@@ -51,6 +52,7 @@ function init() {
                 tra_input.id = "tra_input";
                 tra_input.placeholder = "Traumae..."
                 eng_output.id = "eng_output";
+                letters_to_both.id = "letters_to_both";
                 letters_input.placeholder = "Letters..."
                 letters_input.id = "letters_input";
                 letter_types.forEach(type => {
@@ -66,15 +68,18 @@ function init() {
                 letter_type.addEventListener('change', typeChange);
 
                 // Assemble
+                eng_to_tra.appendChild(document.createElement('br'));
                 eng_to_tra.appendChild(eng_input);
                 eng_to_tra.appendChild(tra_output);
+                tra_to_eng.appendChild(document.createElement('br'));
                 tra_to_eng.appendChild(tra_input);
                 tra_to_eng.appendChild(eng_output);
+                letters_to_both.appendChild(letter_type);
+                letters_to_both.appendChild(document.createElement('br'));
+                letters_to_both.appendChild(letters_input);
                 el.appendChild(eng_to_tra);
                 el.appendChild(tra_to_eng);
-                el.appendChild(letter_type);
-                el.appendChild(document.createElement('br'));
-                el.appendChild(letters_input);
+                el.appendChild(letters_to_both);
 
                 // Handlers
                 function englishToTraumae(e) {
@@ -147,6 +152,7 @@ function init() {
                 function typeChange(e) {
                     let type = e.target.value;
                     letters_input.classList = `ehriv_aeth ${type}`;
+                    letters_input.placeholder = '';
                 }
             } else {
                 console.error(dict_request);
