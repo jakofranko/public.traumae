@@ -55,6 +55,12 @@ function init() {
                 letters_to_both.id = "letters_to_both";
                 letters_input.placeholder = "Letters..."
                 letters_input.id = "letters_input";
+
+                // Add letter types to dropdown
+                let select_none = document.createElement("option");
+                select_none.value = "";
+                select_none.textContent = "Select Letters";
+                letter_type.appendChild(select_none);
                 letter_types.forEach(type => {
                     let option = document.createElement('option');
                     option.textContent = type;
@@ -133,6 +139,8 @@ function init() {
                     // Loop through each letter
                     let curr_string = "";
                     for(let c of sentence) {
+                        if(c === "=") c = "+";
+                        if(c === "_") c = "-";
                         curr_string += c;
                         if(c == "+" || c == "-") continue;
                         if(letters_dict[alt][curr_string]) {
